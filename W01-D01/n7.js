@@ -1,10 +1,11 @@
+// Blm
 let sum = 0;
 function sumDigit(n) {
-  while (n != 0) {
-    sum = sum + n % 100;
-    n = n / 10;
+  n = n.toString();
+  for (let i = 0; i < n.length; i++) {
+    sum += parseInt(n.charAt(i));
   }
   return sum;
 }
 
-console.log(sumDigit(253));
+console.log(sumDigit(1234));
